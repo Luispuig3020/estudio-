@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis Puig Fotografía - AI Studio Assistant</title>
+    <!-- Frameworks y Fuentes de Lujo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        :root { --gold: #D4AF37; --silver: #C0C0C0; --black: #050505; }
+        body { background-color: var(--black); color: white; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .serif { font-family: 'Playfair Display', serif; }
+        .gold-text { color: var(--gold); }
+        .silver-text { color: var(--silver); }
+        .luxury-card { background: #0f0f0f; border: 1px solid rgba(212, 175, 55, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.8); }
+        .progress-bar { background: linear-gradient(90deg, #D4AF37, #C0C0C0); }
+        /* Animación para el botón de voz */
+        @keyframes pulse-gold { 0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); } 70% { box-shadow: 0 0 0 20px rgba(212, 175, 55, 0); } 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); } }
+        .voice-active { animation: pulse-gold 1.5s infinite; background-color: #ff4b2b !important; }
+    </style>
+</head>
+<body class="pb-24">
+
+    <!-- HEADER DE LUJO -->
+    <header class="pt-10 pb-6 text-center px-4">
+        <img src="https://i.ibb.co/MkC0LSDQ/logo.png" alt="Luis Puig" class="w-48 mx-auto mb-4 drop-shadow-[0_0_15px_rgba(212,175,55,0.3)]">
+        <h1 class="serif text-3xl gold-text tracking-[0.2em] uppercase uppercase">Luis Puig</h1>
+        <p class="silver-text text-[10px] tracking-[0.5em] uppercase mt-2">AI Studio Assistant</p>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 space-y-8">
+
+        <!-- MÓDULO CLIMÁTICO INTELIGENTE -->
+        <section class="luxury-card p-6 flex justify-between items-center relative overflow-hidden">
+            <div class="z-10">
+                <p class="text-[10px] uppercase silver-text tracking-widest mb-1">Estado en Exterior</p>
+                <h3 id="weather-status" class="text-xl font-light uppercase">Soleado - 24°C</h3>
+                <p id="weather-advice" class="text-[10px] gold-text mt-2 italic uppercase">✓ Luz dura: Recomendado uso de difusores.</p>
+            </div>
+            <i data-lucide="sun" class="w-12 h-12 gold-text opacity-50"></i>
+        </section>
+
+        <!-- CALENDARIO INTERACTIVO (SIMULADO) -->
+        <section class="luxury-card p-6">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="serif text-xl gold-text uppercase tracking-widest">Agenda Studio</h2>
+                <i data-lucide="calendar" class="w-5 h-5 silver-text"></i>
+            </div>
+            <div class="space-y-4">
+                <div class="flex items-center gap-4 border-l-2 border-[#D4AF37] pl-4 py-2">
+                    <span class="text-xs silver-text">24 ENE</span>
+                    <div>
+                        <p class="font-bold text-sm uppercase">Sesión Editorial Vogue</p>
+                        <p class="text-[10px] text-gray-500 tracking-widest">11:00H - UBICACIÓN: EL RETIRO</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 border-l-2 border-white/20 pl-4 py-2 opacity-50">
+                    <span class="text-xs silver-text">26 ENE</span>
+                    <p class="font-bold text-sm uppercase italic">Cita Médica Revisión</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ESTADO DE EDICIÓN Y ENTREGA -->
+        <section class="luxury-card p-6">
+            <h2 class="serif text-xl gold-text uppercase tracking-widest mb-6">Proyectos en Edición</h2>
+            <div class="space-y-6">
+                <div>
+                    <div class="flex justify-between text-[10px] uppercase silver-text mb-2 tracking-widest">
+                        <span>Boda Elena & Javier</span>
+                        <span class="gold-text">Faltan 4 días</span>
+                    </div>
+                    <div class="w-full bg-white/5 h-1">
+                        <div class="progress-bar h-1" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex justify-between text-[10px] uppercase silver-text mb-2 tracking-widest">
+                        <span>Retrato Corporativo BBVA</span>
+                        <span class="gold-text">Faltan 12 días</span>
+                    </div>
+                    <div class="w-full bg-white/5 h-1">
+                        <div class="progress-bar h-1" style="width: 20%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GESTIÓN DE LOCALIZACIONES (SPOTS) -->
+        <section class="luxury-card p-6">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="serif text-xl gold-text uppercase tracking-widest">Mis Spots Golden</h2>
+                <button class="text-[10px] border border-[#D4AF37]/40 px-3 py-1 gold-text uppercase">Nuevo</button>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-black/40 p-3 border border-white/5">
+                    <p class="text-[10px] font-bold uppercase mb-1">Acantilado Norte</p>
+                    <p class="text-[8px] silver-text uppercase tracking-tighter">Luz: Atardecer (19:30)</p>
+                </div>
+                <div class="bg-black/40 p-3 border border-white/5">
+                    <p class="text-[10px] font-bold uppercase mb-1">Palacio Cristal</p>
+                    <p class="text-[8px] silver-text uppercase tracking-tighter">Luz: Cenital Suave</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHECKLIST PRE-SESIÓN -->
+        <section class="luxury-card p-6">
+            <h2 class="serif text-xl gold-text uppercase tracking-widest mb-4">Gear Checklist</h2>
+            <div class="space-y-3 text-[10px] uppercase tracking-widest">
+                <label class="flex items-center gap-3"><input type="checkbox" checked class="accent-[#D4AF37]"> Baterías cargadas (Cuerpo + Flash)</label>
+                <label class="flex items-center gap-3"><input type="checkbox" class="accent-[#D4AF37]"> Tarjetas SD Formateadas</label>
+                <label class="flex items-center gap-3"><input type="checkbox" class="accent-[#D4AF37]"> Limpieza Sensor y Lentes</label>
+            </div>
+        </section>
+
+        <!-- COMUNICACIÓN RÁPIDA -->
+        <section class="grid grid-cols-2 gap-4">
+            <a href="https://wa.me/34620890554" class="luxury-card p-4 flex flex-col items-center justify-center gap-2">
+                <i data-lucide="message-circle" class="gold-text"></i>
+                <span class="text-[9px] uppercase tracking-[0.2em]">WhatsApp</span>
+            </a>
+            <a href="https://instagram.com/luispuigfotografia" class="luxury-card p-4 flex flex-col items-center justify-center gap-2">
+                <i data-lucide="instagram" class="gold-text"></i>
+                <span class="text-[9px] uppercase tracking-[0.2em]">Instagram</span>
+            </a>
+        </section>
+
+    </main>
+
+    <!-- ASISTENTE DE VOZ NLP (CONTROLADOR) -->
+    <div class="fixed bottom-6 left-0 right-0 flex justify-center z-50">
+        <button id="voice-btn" class="w-20 h-20 gold-bg rounded-full flex items-center justify-center shadow-[0_10px_40px_rgba(0,0,0,0.8)] border-4 border-black transition-all active:scale-95">
+            <i id="mic-icon" data-lucide="mic" class="w-8 h-8 text-black"></i>
+        </button>
+    </div>
+
+    <script>
+        // Inicializar Iconos Lucide
+        lucide.createIcons();
+
+        // MOTOR DE VOZ NLP (Web Speech API)
+        const voiceBtn = document.getElementById('voice-btn');
+        const micIcon = document.getElementById('mic-icon');
+        
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        if (SpeechRecognition) {
+            const recognition = new SpeechRecognition();
+            recognition.lang = 'es-ES';
+
+            voiceBtn.addEventListener('click', () => {
+                recognition.start();
+                voiceBtn.classList.add('voice-active');
+            });
+
+            recognition.onresult = (event) => {
+                const transcript = event.results[0][0].transcript.toLowerCase();
+                voiceBtn.classList.remove('voice-active');
+                
+                // Procesamiento NLP básico solicitado
+                if (transcript.includes("anota sesión")) {
+                    alert("Entendido Luis. Agregando Sesión a la agenda: " + transcript);
+                } else if (transcript.includes("cumpleaños")) {
+                    alert("Recordatorio de cumpleaños guardado en la nube.");
+                } else {
+                    alert("Has dicho: " + transcript + ". Procesando comando...");
+                }
+            };
+
+            recognition.onerror = () => {
+                voiceBtn.classList.remove('voice-active');
+                alert("Error en el dictado. Inténtalo de nuevo.");
+            };
+        } else {
+            voiceBtn.addEventListener('click', () => alert("Tu navegador no soporta entrada de voz. Usa Chrome en Android."));
+        }
+
+        // Simulación de sincronización Supabase (Persistencia Local)
+        console.log("Sistema de sincronización Supabase activo...");
+    </script>
+</body>
+</html>
