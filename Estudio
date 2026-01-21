@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis Puig Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #050505; color: white; font-family: 'Inter', sans-serif; }
+        .serif { font-family: 'Playfair Display', serif; }
+        .oro { color: #D4AF37; }
+        .boton-oro { background: linear-gradient(135deg, #D4AF37 0%, #B8962D 100%); color: black; font-weight: bold; }
+        .tarjeta { background: #0f0f0f; border: 1px solid rgba(212,175,55,0.2); padding: 20px; border-radius: 4px; margin-bottom: 20px; }
+    </style>
+</head>
+<body class="pb-32 px-6">
+    <header class="flex flex-col items-center pt-12 pb-8 text-center">
+        <img src="https://i.ibb.co/MkC0LSDQ/logo.png" alt="Luis Puig" style="width: 220px;">
+        <div style="width: 60px; height: 1px; background-color: #D4AF37; margin-top: 25px; opacity: 0.5;"></div>
+        <p style="font-size: 10px; letter-spacing: 4px; color: #C0C0C0; text-transform: uppercase; margin-top: 15px;">Asistente Inteligente de Estudio</p>
+    </header>
+    <main class="max-w-md mx-auto">
+        <div class="tarjeta text-center">
+            <p style="font-size: 10px; text-transform: uppercase; color: #888;">Madrid, España</p>
+            <p class="oro text-xl mt-1 tracking-tighter uppercase font-bold">☀ 22°C - LUZ ÓPTIMA</p>
+        </div>
+        <div class="tarjeta">
+            <h2 class="serif oro text-lg uppercase tracking-widest mb-4 text-center text-sm">Próxima Sesión</h2>
+            <p class="text-lg font-bold">Boda Elena y Javier</p>
+            <p style="font-size: 10px; color: #888; text-transform: uppercase; margin-bottom: 15px;">MAÑANA - 17:00 Horas</p>
+            <a href="https://wa.me/34620890554" style="display: block; width: 100%; border: 1px solid #D4AF37; text-align: center; padding: 12px 0; font-size: 10px; text-transform: uppercase; color: white; text-decoration: none;">Confirmar Cita</a>
+        </div>
+    </main>
+    <footer style="position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);">
+        <button onclick="alert('Asistente Luis Puig: Escuchando...')" class="w-20 h-20 boton-oro rounded-full flex items-center justify-center shadow-2xl text-3xl">🎙</button>
+    </footer>
+</body>
+</html>
