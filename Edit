@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis Puig Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #050505; color: white; font-family: 'Inter', sans-serif; }
+        .serif { font-family: 'Playfair Display', serif; }
+        .gold { color: #D4AF37; }
+        .gold-bg { background: linear-gradient(135deg, #D4AF37 0%, #B8962D 100%); color: black; font-weight: bold; }
+        .card { background: #0f0f0f; border: 1px solid rgba(212,175,55,0.15); padding: 20px; border-radius: 4px; margin-bottom: 20px; }
+    </style>
+</head>
+<body class="p-6 pb-32">
+    <div class="max-w-md mx-auto text-center">
+        <!-- TU LOGO -->
+        <img src="https://i.ibb.co/MkC0LSDQ/logo.png" alt="Luis Puig" style="width: 220px; margin: 0 auto 20px;">
+        <div style="width: 60px; height: 1px; background-color: #D4AF37; margin: 0 auto 20px; opacity: 0.5;"></div>
+        
+        <div class="card text-left">
+            <p class="text-[10px] uppercase text-gray-500">Madrid, ES</p>
+            <p class="gold text-xl font-bold uppercase tracking-tighter">☀ 22°C - LUZ ÓPTIMA</p>
+        </div>
+
+        <div class="card text-left">
+            <h2 class="serif gold text-lg mb-4 uppercase text-center tracking-widest">Próxima Sesión</h2>
+            <p class="text-lg font-bold">Boda Elena & Javier</p>
+            <p class="text-[10px] text-gray-400 uppercase mb-4">Mañana - 17:00H</p>
+            <a href="https://wa.me/34620890554" style="display: block; width: 100%; border: 1px solid #D4AF37; text-align: center; padding: 12px 0; font-size: 10px; color: white; text-decoration: none; text-transform: uppercase;">Confirmar Cita</a>
+        </div>
+    </div>
+
+    <footer style="position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%);">
+        <button onclick="alert('Asistente Luis Puig: Escuchando...')" class="w-20 h-20 gold-bg rounded-full shadow-2xl flex items-center justify-center text-3xl">🎙</button>
+    </footer>
+</body>
+</html>
